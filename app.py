@@ -31,16 +31,18 @@ def about_authors():
 
 @app.route("/zadania", methods=["POST", "GET"])
 def exercises():
+    results = {}
+    user_answer = {}
     if request.method == "POST":
         for i in range(1, 12):
             name = f'zad{i}'
-            if ex_dict[name] in request.form[name]:
-                pass
-            if ex_dict[name] not in request.form[name]:
-                pass
-        return render_template("zadania.html", ex_dict=ex_dict)
-    else:
-        return render_template("zadania.html")
+            user_answer[name] = request.form[name]
+            correct_answer = ex_dict[name]
+            if user_answer[name] in correct_answer:
+                results[name] = True
+            if user_answer[name] not in correct_answer:
+                results[name] = False
+    return render_template("zadania.html", ex_dict=ex_dict, results=results, user_answer=user_answer)
 
 
 if __name__ == "__main__":

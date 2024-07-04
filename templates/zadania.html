@@ -81,7 +81,7 @@
 	              <p>odpowiedź:</p>
 	              <p><input type="text" name="zad1" /></p>
 	              <p><input type="submit" value="submit"/></p>
-                {% if results.get('zad1') %}
+                {% if results.get('zad1') is not none %}
                   {% if results['zad1'] %}
                     <p style="color: green;">Poprawna odpowiedź!</p>
                   {% else %}
