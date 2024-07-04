@@ -66,22 +66,21 @@ nav.boczne {
     top: 0;
     bottom: 0;
     overflow-y: auto;
-  }
-  nav.boczne a {
+}
+
+nav.boczne a {
     display: block;
     padding: 10px;
     text-decoration: none;
     color: #000;
     border-bottom: 1px solid #ddd;
-  }
+}
 
-  article {
+article {
     margin: 20px 0px 100px 200px;
     background-color: white;
     text-align: justify;
 }
-
-
 
 article h2 {
     font-size: 30px;

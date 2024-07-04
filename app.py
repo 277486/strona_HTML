@@ -1,7 +1,12 @@
+import logging
+
 from flask import Flask, flash, jsonify, render_template, request
 
 app = Flask(__name__)
 app.secret_key = "supersecretkey"
+
+logging.basicConfig(level=logging.ERROR)
+
 
 ex_dict = {
     "zad1": ["-1"],
@@ -41,8 +46,15 @@ def about_authors():
 @app.route("/send_complex", methods=["POST"])
 def send_complex():
     data = request.get_json()
-    real_part = data["realPart"]
-    imaginary_part = data["imaginaryPart"]
+    if not data:
+        return jsonify({"error": "No data provided"}), 400
+
+    try:
+        real_part = float(data["realPart"])
+        imaginary_part = float(data["imaginaryPart"])
+    except (KeyError, TypeError, ValueError):
+        return jsonify({"error": "Invalid data"}), 400
+
     response = {
         "realPart": real_part,
         "imaginaryPart": imaginary_part,
@@ -56,7 +68,9 @@ def exercises():
     if request.method == "POST":
         task_number = request.form.get("task_number")
         name = f"zad{task_number}"
-        user_answer[name] = request.form.get(name).replace(" ", "")
+        data = request.form.get(name)
+        user_answer[name] = data.replace(" ", "")
+
         if user_answer[name]:
             correct_answer = ex_dict[name]
             if user_answer[name] in correct_answer:
@@ -64,6 +78,12 @@ def exercises():
             else:
                 flash(f"{name}:Zła odpowiedź!", "error")
     return render_template("zadania.html", ex_dict=ex_dict, user_answer=user_answer)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    logging.error(f"Błąd 404: Strona nie została znaleziona: {request.url}")
+    return render_template("404.html"), 404
 
 
 if __name__ == "__main__":
