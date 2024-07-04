@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Liczby zespolone</title>
-    <link rel="icon" type="images/png" href="{{ url_for('static', filename='img/ikonka.png') }}">
+    <link
+      rel="icon"
+      type="images/png"
+      href="{{ url_for('static', filename='img/ikonka.png') }}"
+    />
     <style>
       #hidden {
         display: none;
         font-size: 300%;
       }
     </style>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
   </head>
   <body>
     <div class="całość">
@@ -23,20 +30,59 @@
         <h1>Liczby zespolone</h1>
       </header>
       <nav class="głowne">
-        <a class="menu active" href="{{ url_for('home') }}">Strona główna</a>
-            <a class="menu" href="{{ url_for('about_authors') }}">O autorach</a>
-            <a class="menu" href="{{ url_for('bibliography') }}">Bibliografia</a>
+        <a class="menu" href="{{ url_for('home') }}">Strona główna</a>
+        <a class="menu active" href="{{ url_for('about_authors') }}"
+          >O autorach</a
+        >
+        <a class="menu" href="{{ url_for('bibliography') }}">Bibliografia</a>
       </nav>
       <nav class="boczne">
-        <a id="liczby_zespolone" class="bocznne tutaj" href="#">LICZBY ZESPOLONE</a>
-            <a id="bok0" class="bocznne" href="{{ url_for('imaginary_numbers') }}#zbior_zespolony">zbiór liczb zespolonych</a>
-            <a id="bok1" class="bocznne" href="{{ url_for('imaginary_numbers') }}#postac_algebraiczna">postać algebraiczna</a>
-            <a id="bok2" class="bocznne" href="{{ url_for('imaginary_numbers') }}#postac_trygonometryczna">postać trygonometryczna</a>
-            <a id="bok3" class="bocznne" href="{{ url_for('imaginary_numbers') }}#postac_wykladnicza">postać wykładnicza</a>
-            <a id="zadania" class="bocznne tutaj" href="#">ZADANIA</a>
-            <a id="bok0zadania" class="bocznne" href="{{ url_for('exercises') }}#zadanie1">zadanie 1</a>
-            <a id="bok1zadania" class="bocznne" href="{{ url_for('exercises') }}#zadanie2">zadanie 2</a>
-            <a id="bok2zadania" class="bocznne" href="{{ url_for('exercises') }}#zadanie3">zadanie 3</a>
+        <a id="liczby_zespolone" class="bocznne tutaj" href="#"
+          >LICZBY ZESPOLONE</a
+        >
+        <a
+          id="bok0"
+          class="bocznne"
+          href="{{ url_for('imaginary_numbers') }}#zbior_zespolony"
+          >zbiór liczb zespolonych</a
+        >
+        <a
+          id="bok1"
+          class="bocznne"
+          href="{{ url_for('imaginary_numbers') }}#postac_algebraiczna"
+          >postać algebraiczna</a
+        >
+        <a
+          id="bok2"
+          class="bocznne"
+          href="{{ url_for('imaginary_numbers') }}#postac_trygonometryczna"
+          >postać trygonometryczna</a
+        >
+        <a
+          id="bok3"
+          class="bocznne"
+          href="{{ url_for('imaginary_numbers') }}#postac_wykladnicza"
+          >postać wykładnicza</a
+        >
+        <a id="zadania" class="bocznne tutaj" href="#">ZADANIA</a>
+        <a
+          id="bok0zadania"
+          class="bocznne"
+          href="{{ url_for('exercises') }}#zadanie1"
+          >zadanie 1</a
+        >
+        <a
+          id="bok1zadania"
+          class="bocznne"
+          href="{{ url_for('exercises') }}#zadanie2"
+          >zadanie 2</a
+        >
+        <a
+          id="bok2zadania"
+          class="bocznne"
+          href="{{ url_for('exercises') }}#zadanie3"
+          >zadanie 3</a
+        >
       </nav>
       <script>
         $("#liczby_zespolone").on("click", function (e) {
@@ -59,7 +105,11 @@
             <p>
               Studenci I roku matematyki stosowanej na Politchnice Wrocławskiej.
             </p>
-            <img class="kotek" src="{{ url_for('static', filename='img/kotkitrzy.jpg') }}" alt="trzy kotki">
+            <img
+              class="kotek"
+              src="{{ url_for('static', filename='img/kotkitrzy.jpg') }}"
+              alt="trzy kotki"
+            />
           </section>
         </article>
       </main>
