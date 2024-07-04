@@ -149,6 +149,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad3" /></p>
                 <p><input type="submit" value="submit" /></p>
+                {% with messages = get_flashed_messages() %} {% if messages %}
+                {% for msg in messages %}
+                <p>{{ msg }}</p>
+                {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
               <li>\((1 + \mathrm{i})^2\)</li>
@@ -157,6 +161,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad4" /></p>
                 <p><input type="submit" value="submit" /></p>
+                {% with messages = get_flashed_messages() %} {% if messages %}
+                {% for msg in messages %}
+                <p>{{ msg }}</p>
+                {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
             </ol>
@@ -170,6 +178,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad5" /></p>
                 <p><input type="submit" value="submit" /></p>
+                {% with messages = get_flashed_messages() %} {% if messages %}
+                {% for msg in messages %}
+                <p>{{ msg }}</p>
+                {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
               <li>\(12\mathrm{i}-5\)</li>
@@ -178,6 +190,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad6" /></p>
                 <p><input type="submit" value="submit" /></p>
+                {% with messages = get_flashed_messages() %} {% if messages %}
+                {% for msg in messages %}
+                <p>{{ msg }}</p>
+                {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
               <li>\(\sqrt{7}+\sqrt{29}\mathrm{i}\)</li>
@@ -186,6 +202,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad7" /></p>
                 <p><input type="submit" value="submit" /></p>
+                {% with messages = get_flashed_messages() %} {% if messages %}
+                {% for msg in messages %}
+                <p>{{ msg }}</p>
+                {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
               <li>\((\sqrt{5}-\sqrt{3})+(\sqrt{5}+\sqrt{3})\mathrm{i}\)</li>
@@ -194,6 +214,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad8" /></p>
                 <p><input type="submit" value="submit" /></p>
+                {% with messages = get_flashed_messages() %} {% if messages %}
+                {% for msg in messages %}
+                <p>{{ msg }}</p>
+                {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
             </ol>
@@ -209,6 +233,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad9" /></p>
                 <p><input type="submit" value="submit" /></p>
+                {% with messages = get_flashed_messages() %} {% if messages %}
+                {% for msg in messages %}
+                <p>{{ msg }}</p>
+                {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
               <li>
@@ -219,6 +247,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad10" /></p>
                 <p><input type="submit" value="submit" /></p>
+                {% with messages = get_flashed_messages() %} {% if messages %}
+                {% for msg in messages %}
+                <p>{{ msg }}</p>
+                {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
               <li>
@@ -229,6 +261,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad11" /></p>
                 <p><input type="submit" value="submit" /></p>
+                {% with messages = get_flashed_messages() %} {% if messages %}
+                {% for msg in messages %}
+                <p>{{ msg }}</p>
+                {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
             </ol>
