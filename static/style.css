@@ -189,3 +189,13 @@ ol.numbered {
 ol.nested {
     padding-left: 40px;
 }
+
+.centrum {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.srodek {
+    max-width: 20px auto;
+    text-align: center;
+}
