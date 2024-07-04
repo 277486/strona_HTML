@@ -43,7 +43,10 @@ def send_complex():
     data = request.get_json()
     real_part = data["realPart"]
     imaginary_part = data["imaginaryPart"]
-    response = {"realPart": real_part, "imaginaryPart": imaginary_part}
+    response = {
+        "realPart": real_part,
+        "imaginaryPart": imaginary_part,
+    }
     return jsonify(response)
 
 

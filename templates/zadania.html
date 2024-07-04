@@ -135,10 +135,15 @@
                 <p><input type="text" name="zad1" /></p>
                 <input type="hidden" name="task_number" value="1" />
                 <input type="submit" value="Wyślij" />
-                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
-                {% for category, msg in messages %} {% if msg.startswith('zad1:') %}
-                <p class="{{ category }}">{{ msg[5:] }}</p>
-                {% endif %} {% endfor %} {% endif %} {% endwith %}
+                {% with messages = get_flashed_messages(with_categories=True) %}  
+                  {% if messages %}
+                    {% for category, msg in messages %} 
+                      {% if msg.startswith('zad1:') %}
+                        <p class="{{ category }}">{{ msg[5:] }}</p>
+                      {% endif %} 
+                    {% endfor %} 
+                  {% endif %} 
+                {% endwith %}
               </form>
               {% endblock %}
               <li>\((-2+3\mathrm{i})+(7-8\mathrm{i})\)</li>
@@ -148,10 +153,15 @@
                 <p><input type="text" name="zad2" /></p>
                 <input type="hidden" name="task_number" value="2" />
                 <input type="submit" value="Wyślij" />
-                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
-                {% for category, msg in messages %} {% if msg.startswith('zad2:') %}
-                <p class="{{ category }}">{{ msg[5:] }}</p>
-                {% endif %} {% endfor %} {% endif %} {% endwith %}
+                {% with messages = get_flashed_messages(with_categories=True) %}  
+                  {% if messages %}
+                    {% for category, msg in messages %} 
+                      {% if msg.startswith('zad2:') %}
+                        <p class="{{ category }}">{{ msg[5:] }}</p>
+                      {% endif %} 
+                    {% endfor %} 
+                  {% endif %} 
+                {% endwith %}
               </form>
               {% endblock %}
               <li>\((4\mathrm{i}-3)-(1+10\mathrm{i})\)</li>
@@ -161,10 +171,15 @@
                 <p><input type="text" name="zad3" /></p>
                 <input type="hidden" name="task_number" value="3" />
                 <input type="submit" value="Wyślij" />
-                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
-                {% for category, msg in messages %} {% if msg.startswith('zad3:') %}
-                <p class="{{ category }}">{{ msg[5:] }}</p>
-                {% endif %} {% endfor %} {% endif %} {% endwith %}
+                {% with messages = get_flashed_messages(with_categories=True) %}  
+                  {% if messages %}
+                    {% for category, msg in messages %} 
+                      {% if msg.startswith('zad3:') %}
+                        <p class="{{ category }}">{{ msg[5:] }}</p>
+                      {% endif %} 
+                    {% endfor %} 
+                  {% endif %} 
+                {% endwith %}
               </form>
               {% endblock %}
               <li>\((1 + \mathrm{i})^2\)</li>
@@ -174,10 +189,15 @@
                 <p><input type="text" name="zad4" /></p>
                 <input type="hidden" name="task_number" value="4" />
                 <input type="submit" value="Wyślij" />
-                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
-                {% for category, msg in messages %} {% if msg.startswith('zad4:') %}
-                <p class="{{ category }}">{{ msg[5:] }}</p>
-                {% endif %} {% endfor %} {% endif %} {% endwith %}
+                {% with messages = get_flashed_messages(with_categories=True) %}  
+                  {% if messages %}
+                    {% for category, msg in messages %} 
+                      {% if msg.startswith('zad4:') %}
+                        <p class="{{ category }}">{{ msg[5:] }}</p>
+                      {% endif %} 
+                    {% endfor %} 
+                  {% endif %} 
+                {% endwith %}
               </form>
               {% endblock %}
             </ol>
@@ -192,10 +212,15 @@
                 <p><input type="text" name="zad5" /></p>
                 <input type="hidden" name="task_number" value="5" />
                 <input type="submit" value="Wyślij" />
-                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
-                {% for category, msg in messages %} {% if msg.startswith('zad5:') %}
-                <p class="{{ category }}">{{ msg[5:] }}</p>
-                {% endif %} {% endfor %} {% endif %} {% endwith %}
+                {% with messages = get_flashed_messages(with_categories=True) %}  
+                  {% if messages %}
+                    {% for category, msg in messages %} 
+                      {% if msg.startswith('zad5:') %}
+                        <p class="{{ category }}">{{ msg[5:] }}</p>
+                      {% endif %} 
+                    {% endfor %} 
+                  {% endif %} 
+                {% endwith %}
               </form>
               {% endblock %}
               <li>\(12\mathrm{i}-5\)</li>
@@ -205,10 +230,15 @@
                 <p><input type="text" name="zad6" /></p>
                 <input type="hidden" name="task_number" value="6" />
                 <input type="submit" value="Wyślij" />
-                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
-                {% for category, msg in messages %} {% if msg.startswith('zad6:') %}
-                <p class="{{ category }}">{{ msg[5:] }}</p>
-                {% endif %} {% endfor %} {% endif %} {% endwith %}
+                {% with messages = get_flashed_messages(with_categories=True) %}  
+                  {% if messages %}
+                    {% for category, msg in messages %} 
+                      {% if msg.startswith('zad6:') %}
+                        <p class="{{ category }}">{{ msg[5:] }}</p>
+                      {% endif %} 
+                    {% endfor %} 
+                  {% endif %} 
+                {% endwith %}
               </form>
               {% endblock %}
               <li>\(\sqrt{7}+\sqrt{29}\mathrm{i}\)</li>
@@ -218,10 +248,15 @@
                 <p><input type="text" name="zad7" /></p>
                 <input type="hidden" name="task_number" value="7" />
                 <input type="submit" value="Wyślij" />
-                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
-                {% for category, msg in messages %} {% if msg.startswith('zad7:') %}
-                <p class="{{ category }}">{{ msg[5:] }}</p>
-                {% endif %} {% endfor %} {% endif %} {% endwith %}
+                {% with messages = get_flashed_messages(with_categories=True) %}  
+                  {% if messages %}
+                    {% for category, msg in messages %} 
+                      {% if msg.startswith('zad7:') %}
+                        <p class="{{ category }}">{{ msg[5:] }}</p>
+                      {% endif %} 
+                    {% endfor %} 
+                  {% endif %} 
+                {% endwith %}
               </form>
               {% endblock %}
               <li>\((\sqrt{5}-\sqrt{3})+(\sqrt{5}+\sqrt{3})\mathrm{i}\)</li>
@@ -231,10 +266,15 @@
                 <p><input type="text" name="zad8" /></p>
                 <input type="hidden" name="task_number" value="8" />
                 <input type="submit" value="Wyślij" />
-                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
-                {% for category, msg in messages %} {% if msg.startswith('zad8:') %}
-                <p class="{{ category }}">{{ msg[5:] }}</p>
-                {% endif %} {% endfor %} {% endif %} {% endwith %}
+                {% with messages = get_flashed_messages(with_categories=True) %}  
+                  {% if messages %}
+                    {% for category, msg in messages %} 
+                      {% if msg.startswith('zad8:') %}
+                        <p class="{{ category }}">{{ msg[5:] }}</p>
+                      {% endif %} 
+                    {% endfor %} 
+                  {% endif %} 
+                {% endwith %}
               </form>
               {% endblock %}
             </ol>
@@ -251,10 +291,15 @@
                 <p><input type="text" name="zad9" /></p>
                 <input type="hidden" name="task_number" value="9" />
                 <input type="submit" value="Wyślij" />
-                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
-                {% for category, msg in messages %} {% if msg.startswith('zad9:') %}
-                <p class="{{ category }}">{{ msg[5:] }}</p>
-                {% endif %} {% endfor %} {% endif %} {% endwith %}
+                {% with messages = get_flashed_messages(with_categories=True) %}  
+                  {% if messages %}
+                    {% for category, msg in messages %} 
+                      {% if msg.startswith('zad9:') %}
+                        <p class="{{ category }}">{{ msg[5:] }}</p>
+                      {% endif %} 
+                    {% endfor %} 
+                  {% endif %} 
+                {% endwith %}
               </form>
               {% endblock %}
               <li>
@@ -266,10 +311,15 @@
                 <p><input type="text" name="zad10" /></p>
                 <input type="hidden" name="task_number" value="10" />
                 <input type="submit" value="Wyślij" />
-                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
-                {% for category, msg in messages %} {% if msg.startswith('zad10:') %}
-                <p class="{{ category }}">{{ msg[5:] }}</p>
-                {% endif %} {% endfor %} {% endif %} {% endwith %}
+                {% with messages = get_flashed_messages(with_categories=True) %}  
+                  {% if messages %}
+                    {% for category, msg in messages %} 
+                      {% if msg.startswith('zad10:') %}
+                        <p class="{{ category }}">{{ msg[5:] }}</p>
+                      {% endif %} 
+                    {% endfor %} 
+                  {% endif %} 
+                {% endwith %}
               </form>
               {% endblock %}
               <li>
@@ -281,10 +331,15 @@
                 <p><input type="text" name="zad11" /></p>
                 <input type="hidden" name="task_number" value="11" />
                 <input type="submit" value="Wyślij" />
-                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
-                {% for category, msg in messages %} {% if msg.startswith('zad11:') %}
-                <p class="{{ category }}">{{ msg[5:] }}</p>
-                {% endif %} {% endfor %} {% endif %} {% endwith %}
+                {% with messages = get_flashed_messages(with_categories=True) %}  
+                  {% if messages %}
+                    {% for category, msg in messages %} 
+                      {% if msg.startswith('zad11:') %}
+                        <p class="{{ category }}">{{ msg[5:] }}</p>
+                      {% endif %} 
+                    {% endfor %} 
+                  {% endif %} 
+                {% endwith %}
               </form>
               {% endblock %}
             </ol>
@@ -300,20 +355,60 @@
           <input type="text" id="imaginaryPart" name="imaginaryPart" /><br />
           <input type="submit" value="Wyślij" />
         </form>
-      </div>
+        </div>
       </section>
         <script>
-          var board = JXG.JSXGraph.initBoard("jxgbox", {
+          board = JXG.JSXGraph.initBoard("jxgbox", {
             boundingbox: [-10, 10, 10, -10],
             axis: true,
           });
 
+          document.getElementById("complexForm").onsubmit = function (event) {
+            event.preventDefault();
+            var real = parseFloat(document.getElementById("realPart").value);
+            var imag = parseFloat(document.getElementById("imaginaryPart").value);
+          
+            if (board) {
+              JXG.JSXGraph.freeBoard(board);
+            }
+
+            board = JXG.JSXGraph.initBoard("jxgbox", {
+              boundingbox: [-10, 10, 10, -10],
+              axis: true,
+            });
+
+            plotComplexNumber(real, imag);
+
+            var data = {
+              realPart: real,
+              imaginaryPart: imag,
+            };
+
+            fetch("/send_complex", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                console.log("Success:", data);
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+              });
+          };
+
           function plotComplexNumber(real, imag) {
+            var maxAxisValue = Math.max(Math.abs(real)+2, Math.abs(imag)+2, 10);
+            board.setBoundingBox([-maxAxisValue, maxAxisValue, maxAxisValue, -maxAxisValue]);
+
             var point = board.create("point", [real, imag], {
               name: "z",
               size: 4,
               face: "o",
-              strokeColor: "#00ff00",
+              strokeColor: "#d239ed",
               fixed: true,
             });
             var line = board.create(
@@ -326,7 +421,7 @@
                 straightFirst: false,
                 straightLast: false,
                 strokeWidth: 2,
-                strokeColor: "#ff0000",
+                strokeColor: "#4d42c2",
                 fixed: true,
               }
             );
@@ -357,7 +452,7 @@
                 drawPoint,
               ],
               {
-                strokeColor: "#0000ff",
+                strokeColor: "#30297d",
                 strokeWidth: 2,
                 fixed: true,
               }
@@ -365,38 +460,11 @@
 
             var arrowEnd = [radius * Math.cos(angle), radius * Math.sin(angle)];
             board.create("arrow", [[0, 0], arrowEnd], {
-              strokeColor: "#0000ff",
+              strokeColor: "#30297d",
               strokeWidth: 2,
               fixed: true,
             });
           }
-
-          document.getElementById("complexForm").onsubmit = function (event) {
-            event.preventDefault();
-            var real = parseFloat(document.getElementById("realPart").value);
-            var imag = parseFloat(document.getElementById("imaginaryPart").value);
-            plotComplexNumber(real, imag);
-
-            var data = {
-              realPart: real,
-              imaginaryPart: imag,
-            };
-
-            fetch("/send_complex", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(data),
-            })
-              .then((response) => response.json())
-              .then((data) => {
-                console.log("Success:", data);
-              })
-              .catch((error) => {
-                console.error("Error:", error);
-              });
-          };
       </script>
     </article>
   </main>
