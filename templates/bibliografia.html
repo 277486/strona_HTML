@@ -87,6 +87,12 @@
           href="{{ url_for('exercises') }}#zadanie3"
           >zadanie 3</a
         >
+        <a
+          id="bok3zadania"
+          class="bocznne"
+          href="{{ url_for('exercises') }}#zadanie4"
+          >zabawa z wykresem</a
+        >
       </nav>
       <script>
         $("#liczby_zespolone").on("click", function (e) {
@@ -96,9 +102,10 @@
           $("#bok3").slideToggle();
         });
         $("#zadania").on("click", function (e) {
-          $("#zadanie0").slideToggle();
-          $("#zadanie1").slideToggle();
-          $("#zadanie2").slideToggle();
+          $("#bok0zadania").slideToggle();
+          $("#bok1zadania").slideToggle();
+          $("#bok2zadania").slideToggle();
+          $("#bok3zadania").slideToggle();
         });
       </script>
       <main>

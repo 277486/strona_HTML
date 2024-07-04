@@ -17,6 +17,7 @@
         width: 500px;
         height: 500px;
         border: 1px solid black;
+        margin: 20px auto;
       }
       ol {
         padding-left: 20px;
@@ -99,6 +100,12 @@
           href="{{ url_for('exercises') }}#zadanie3"
           >zadanie 3</a
         >
+        <a
+          id="bok3zadania"
+          class="bocznne"
+          href="{{ url_for('exercises') }}#zadanie4"
+          >zabawa z wykresem</a
+        >
       </nav>
       <script>
         $("#liczby_zespolone").on("click", function (e) {
@@ -111,6 +118,7 @@
           $("#bok0zadania").slideToggle();
           $("#bok1zadania").slideToggle();
           $("#bok2zadania").slideToggle();
+          $("#bok3zadania").slideToggle();
         });
       </script>
       <main>
@@ -128,8 +136,7 @@
                 <input type="hidden" name="task_number" value="1" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %}
-                {% if msg.startswith('zad1:') %}
+                {% for msg in messages %} {% if msg.startswith('zad1:') %}
                 <p>{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
@@ -142,8 +149,7 @@
                 <input type="hidden" name="task_number" value="2" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %}
-                {% if msg.startswith('zad2:') %}
+                {% for msg in messages %} {% if msg.startswith('zad2:') %}
                 <p>{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
@@ -156,8 +162,7 @@
                 <input type="hidden" name="task_number" value="3" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %}
-                {% if msg.startswith('zad3:') %}
+                {% for msg in messages %} {% if msg.startswith('zad3:') %}
                 <p>{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
@@ -170,8 +175,7 @@
                 <input type="hidden" name="task_number" value="4" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %}
-                {% if msg.startswith('zad4:') %}
+                {% for msg in messages %} {% if msg.startswith('zad4:') %}
                 <p>{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
@@ -189,8 +193,7 @@
                 <input type="hidden" name="task_number" value="5" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %}
-                {% if msg.startswith('zad5:') %}
+                {% for msg in messages %} {% if msg.startswith('zad5:') %}
                 <p>{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
@@ -203,8 +206,7 @@
                 <input type="hidden" name="task_number" value="6" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %}
-                {% if msg.startswith('zad6:') %}
+                {% for msg in messages %} {% if msg.startswith('zad6:') %}
                 <p>{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
@@ -217,8 +219,7 @@
                 <input type="hidden" name="task_number" value="7" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %}
-                {% if msg.startswith('zad7:') %}
+                {% for msg in messages %} {% if msg.startswith('zad7:') %}
                 <p>{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
@@ -231,8 +232,7 @@
                 <input type="hidden" name="task_number" value="8" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %}
-                {% if msg.startswith('zad8:') %}
+                {% for msg in messages %} {% if msg.startswith('zad8:') %}
                 <p>{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
@@ -252,8 +252,7 @@
                 <input type="hidden" name="task_number" value="9" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %}
-                {% if msg.startswith('zad9:') %}
+                {% for msg in messages %} {% if msg.startswith('zad9:') %}
                 <p>{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
@@ -268,8 +267,7 @@
                 <input type="hidden" name="task_number" value="10" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %}
-                {% if msg.startswith('zad10:') %}
+                {% for msg in messages %} {% if msg.startswith('zad10:') %}
                 <p>{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
@@ -284,124 +282,126 @@
                 <input type="hidden" name="task_number" value="11" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %}
-                {% if msg.startswith('zad11:') %}
+                {% for msg in messages %} {% if msg.startswith('zad11:') %}
                 <p>{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
             </ol>
-          </section>
-        </article>
-      </main>
-    </div>
-    <h3>Zabawa z wykresen</h3>
-    <div class="jxgbox" id="jxgbox" style="width: 500px; height: 500px"></div>
-    <form id="complexForm" method="POST" action="/send_complex">
-      <label for="realPart">Część rzeczywista:</label>
-      <input type="text" id="realPart" name="realPart" /><br />
-      <label for="imaginaryPart">Część urojona:</label>
-      <input type="text" id="imaginaryPart" name="imaginaryPart" /><br />
-      <input type="submit" value="Wyślij" />
-    </form>
-    <script>
-      var board = JXG.JSXGraph.initBoard("jxgbox", {
-        boundingbox: [-10, 10, 10, -10],
-        axis: true,
-      });
-
-      function plotComplexNumber(real, imag) {
-        var point = board.create("point", [real, imag], {
-          name: "z",
-          size: 4,
-          face: "o",
-          strokeColor: "#00ff00",
-          fixed: true,
-        });
-        var line = board.create(
-          "line",
-          [
-            [0, 0],
-            [real, imag],
-          ],
-          {
-            straightFirst: false,
-            straightLast: false,
-            strokeWidth: 2,
-            strokeColor: "#ff0000",
-            fixed: true,
-          }
-        );
-
-        var angle = Math.atan2(imag, real);
-        var radius = Math.sqrt(real * real + imag * imag);
-
-        // Create fixed points at (0, 0) and (1, 0)
-        const origin = board.create("point", [0, 0], {
-          fixed: true,
-          visible: false, // Hide the point
-        });
-
-        const fixedPoint = board.create("point", [real * 0.5, 0], {
-          fixed: true,
-          visible: false, // Hide the point
-        });
-
-        const drawPoint = board.create("point", [real, imag], {
-          fixed: true,
-          visible: false,
-        });
-
-        // Draw the arc to represent the angle
-        board.create(
-          "arc",
-          [
-            origin, // center
-            fixedPoint, // radius endpoint on x-axis
-            drawPoint, // point on the circle
-          ],
-          {
-            strokeColor: "#0000ff",
-            strokeWidth: 2,
-            fixed: true,
-          }
-        );
-
-        // Draw the arrow at the end of the arc
-        var arrowEnd = [radius * Math.cos(angle), radius * Math.sin(angle)];
-        board.create("arrow", [[0, 0], arrowEnd], {
-          strokeColor: "#0000ff",
-          strokeWidth: 2,
-          fixed: true,
-        });
-      }
-
-      document.getElementById("complexForm").onsubmit = function (event) {
-        event.preventDefault();
-        var real = parseFloat(document.getElementById("realPart").value);
-        var imag = parseFloat(document.getElementById("imaginaryPart").value);
-        plotComplexNumber(real, imag);
-
-        var data = {
-          realPart: real,
-          imaginaryPart: imag,
-        };
-
-        fetch("/send_complex", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Success:", data);
-          })
-          .catch((error) => {
-            console.error("Error:", error);
+          
+        
+        
+        <h3 id="zadanie4">Zabawa z wykresen</h3>
+        <div class="jxgbox" id="jxgbox" style="width: 500px; height: 500px"></div>
+        <form id="complexForm" method="POST" action="/send_complex">
+          <label for="realPart">Część rzeczywista:</label>
+          <input type="text" id="realPart" name="realPart" /><br />
+          <label for="imaginaryPart">Część urojona:</label>
+          <input type="text" id="imaginaryPart" name="imaginaryPart" /><br />
+          <input type="submit" value="Wyślij" />
+        </form>
+      </div>
+      </section>
+        <script>
+          var board = JXG.JSXGraph.initBoard("jxgbox", {
+            boundingbox: [-10, 10, 10, -10],
+            axis: true,
           });
-      };
-    </script>
+
+          function plotComplexNumber(real, imag) {
+            var point = board.create("point", [real, imag], {
+              name: "z",
+              size: 4,
+              face: "o",
+              strokeColor: "#00ff00",
+              fixed: true,
+            });
+            var line = board.create(
+              "line",
+              [
+                [0, 0],
+                [real, imag],
+              ],
+              {
+                straightFirst: false,
+                straightLast: false,
+                strokeWidth: 2,
+                strokeColor: "#ff0000",
+                fixed: true,
+              }
+            );
+
+            var angle = Math.atan2(imag, real);
+            var radius = Math.sqrt(real * real + imag * imag);
+
+            // Create fixed points at (0, 0) and (1, 0)
+            const origin = board.create("point", [0, 0], {
+              fixed: true,
+              visible: false, // Hide the point
+            });
+
+            const fixedPoint = board.create("point", [real * 0.5, 0], {
+              fixed: true,
+              visible: false, // Hide the point
+            });
+
+            const drawPoint = board.create("point", [real, imag], {
+              fixed: true,
+              visible: false,
+            });
+
+            // Draw the arc to represent the angle
+            board.create(
+              "arc",
+              [
+                origin, // center
+                fixedPoint, // radius endpoint on x-axis
+                drawPoint, // point on the circle
+              ],
+              {
+                strokeColor: "#0000ff",
+                strokeWidth: 2,
+                fixed: true,
+              }
+            );
+
+            // Draw the arrow at the end of the arc
+            var arrowEnd = [radius * Math.cos(angle), radius * Math.sin(angle)];
+            board.create("arrow", [[0, 0], arrowEnd], {
+              strokeColor: "#0000ff",
+              strokeWidth: 2,
+              fixed: true,
+            });
+          }
+
+          document.getElementById("complexForm").onsubmit = function (event) {
+            event.preventDefault();
+            var real = parseFloat(document.getElementById("realPart").value);
+            var imag = parseFloat(document.getElementById("imaginaryPart").value);
+            plotComplexNumber(real, imag);
+
+            var data = {
+              realPart: real,
+              imaginaryPart: imag,
+            };
+
+            fetch("/send_complex", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                console.log("Success:", data);
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+              });
+          };
+      </script>
+    </article>
+  </main>
   </body>
 </html>

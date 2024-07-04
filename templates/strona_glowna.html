@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Liczby zespolone</title>
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/ikonka.png') }}">
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='img/ikonka.png') }}"
+    />
     <style>
       #hidden {
         display: none;
         font-size: 300%;
       }
     </style>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
   </head>
   <body>
     <div class="całość">
@@ -59,14 +66,29 @@
           >postać wykładnicza</a
         >
         <a id="zadania" class="bocznne tutaj" href="#">ZADANIA</a>
-        <a id="zadanie0" class="bocznne" href="{{ url_for('exercises') }}#zadanie1"
+        <a
+          id="zadanie0"
+          class="bocznne"
+          href="{{ url_for('exercises') }}#zadanie1"
           >zadanie 1</a
         >
-        <a id="zadanie1" class="bocznne" href="{{ url_for('exercises') }}#zadanie2"
+        <a
+          id="zadanie1"
+          class="bocznne"
+          href="{{ url_for('exercises') }}#zadanie2"
           >zadanie 2</a
         >
-        <a id="zadanie2" class="bocznne" href="{{ url_for('exercises') }}#zadanie3"
+        <a
+          id="zadanie2"
+          class="bocznne"
+          href="{{ url_for('exercises') }}#zadanie3"
           >zadanie 3</a
+        >
+        <a
+          id="bok3zadania"
+          class="bocznne"
+          href="{{ url_for('exercises') }}#zadanie4"
+          >zabawa z wykresem</a
         >
       </nav>
       <script>
@@ -77,9 +99,10 @@
           $("#bok3").slideToggle();
         });
         $("#zadania").on("click", function (e) {
-          $("#zadanie0").slideToggle();
-          $("#zadanie1").slideToggle();
-          $("#zadanie2").slideToggle();
+          $("#bok0zadania").slideToggle();
+          $("#bok1zadania").slideToggle();
+          $("#bok2zadania").slideToggle();
+          $("#bok3zadania").slideToggle();
         });
       </script>
       <main>
@@ -88,9 +111,12 @@
           <section>
             <h3>Wprowadzenie</h3>
             <p>
-              <img class="kotek" src="{{ url_for('static', filename='img/kotek.jpg') }}" alt="kotek">Ta strona
-              pomoże Ci zapoznać się z liczbami zespolonymi, ich różnymi
-              postaciami oraz operacjami na nich.
+              <img
+                class="kotek"
+                src="{{ url_for('static', filename='img/kotek.jpg') }}"
+                alt="kotek"
+              />Ta strona pomoże Ci zapoznać się z liczbami zespolonymi, ich
+              różnymi postaciami oraz operacjami na nich.
             </p>
           </section>
         </article>
