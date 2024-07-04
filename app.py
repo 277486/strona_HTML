@@ -5,15 +5,15 @@ app.secret_key = "supersecretkey"
 
 ex_dict = {
     "zad1": ["-1"],
-    "zad2": ["5 - 5i", "5-5i", "-5i + 5", "-5i+5"],
-    "zad3": ["-4 - 6i", "-4-6i", "-6i - 4", "-6i-4"],
+    "zad2": ["5-5i", "-5i+5"],
+    "zad3": ["-4-6i", "-6i-4"],
     "zad4": ["2i"],
     "zad5": ["4"],
     "zad6": ["13"],
     "zad7": ["6"],
     "zad8": ["4"],
-    "zad9": ["8 - 8i"],
-    "zad10": ["-1/8i"],
+    "zad9": ["8-8i", "-8i+8"],
+    "zad10": ["-1/8i", "-0.125i"],
     "zad11": ["1"],
 }
 
@@ -56,7 +56,7 @@ def exercises():
     if request.method == "POST":
         task_number = request.form.get("task_number")
         name = f"zad{task_number}"
-        user_answer[name] = request.form.get(name)
+        user_answer[name] = request.form.get(name).replace(" ", "")
         if user_answer[name]:
             correct_answer = ex_dict[name]
             if user_answer[name] in correct_answer:

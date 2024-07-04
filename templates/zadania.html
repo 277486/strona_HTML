@@ -305,7 +305,7 @@
                   {% if messages %}
                     {% for category, msg in messages %} 
                       {% if msg.startswith('zad10:') %}
-                        <p class="{{ category }}">{{ msg[5:] }}</p>
+                        <p class="{{ category }}">{{ msg[6:] }}</p>
                       {% endif %} 
                     {% endfor %} 
                   {% endif %} 
@@ -325,7 +325,7 @@
                   {% if messages %}
                     {% for category, msg in messages %} 
                       {% if msg.startswith('zad11:') %}
-                        <p class="{{ category }}">{{ msg[5:] }}</p>
+                        <p class="{{ category }}">{{ msg[6:] }}</p>
                       {% endif %} 
                     {% endfor %} 
                   {% endif %} 
