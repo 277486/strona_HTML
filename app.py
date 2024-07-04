@@ -1,4 +1,4 @@
-from flask import Flask, flash, render_template, request
+from flask import Flask, flash, jsonify, render_template, request
 
 app = Flask(__name__)
 app.secret_key = "supersecretkey"
@@ -36,6 +36,15 @@ def imaginary_numbers():
 @app.route("/o_autorach")
 def about_authors():
     return render_template("o_autorach.html")
+
+
+@app.route("/send_complex", methods=["POST"])
+def send_complex():
+    data = request.get_json()
+    real_part = data["realPart"]
+    imaginary_part = data["imaginaryPart"]
+    response = {"realPart": real_part, "imaginaryPart": imaginary_part}
+    return jsonify(response)
 
 
 @app.route("/zadania", methods=["POST", "GET"])
