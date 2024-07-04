@@ -52,9 +52,7 @@ def exercises():
     user_answer = {}
     if request.method == "POST":
         task_number = request.form.get("task_number")
-        print(task_number)
         name = f"zad{task_number}"
-        print(name)
         user_answer[name] = request.form.get(name)
         if user_answer[name]:
             correct_answer = ex_dict[name]
