@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>Liczby zespolone</title>
+    <link rel="icon" type="images/png" href="{{ url_for('static', filename='img/ikonka.png') }}">
+    <style>
+      #hidden {
+        display: none;
+        font-size: 300%;
+      }
+      .jxgbox {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+      }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+  </head>
+  <body>
+    <div class="całość">
+      <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"
+      ></script>
+      <header>
+        <h1>Liczby zespolone</h1>
+      </header>
+      <nav class="głowne">
+        <a class="menu active" href="{{ url_for('home') }}">Strona główna</a>
+            <a class="menu" href="{{ url_for('about_authors') }}">O autorach</a>
+            <a class="menu" href="{{ url_for('bibliography') }}">Bibliografia</a>
+      </nav>
+      <nav class="boczne">
+        <a id="liczby_zespolone" class="bocznne tutaj" href="#">LICZBY ZESPOLONE</a>
+            <a id="bok0" class="bocznne" href="{{ url_for('imaginary_numbers') }}#zbior_zespolony">zbiór liczb zespolonych</a>
+            <a id="bok1" class="bocznne" href="{{ url_for('imaginary_numbers') }}#postac_algebraiczna">postać algebraiczna</a>
+            <a id="bok2" class="bocznne" href="{{ url_for('imaginary_numbers') }}#postac_trygonometryczna">postać trygonometryczna</a>
+            <a id="bok3" class="bocznne" href="{{ url_for('imaginary_numbers') }}#postac_wykladnicza">postać wykładnicza</a>
+            <a id="zadania" class="bocznne tutaj" href="#">ZADANIA</a>
+            <a id="bok0zadania" class="bocznne" href="{{ url_for('exercises') }}#zadanie1">zadanie 1</a>
+            <a id="bok1zadania" class="bocznne" href="{{ url_for('exercises') }}#zadanie2">zadanie 2</a>
+            <a id="bok2zadania" class="bocznne" href="{{ url_for('exercises') }}#zadanie3">zadanie 3</a>
+      </nav>
+      <script>
+        $("#liczby_zespolone").on("click", function (e) {
+          $("#bok0").slideToggle();
+          $("#bok1").slideToggle();
+          $("#bok2").slideToggle();
+          $("#bok3").slideToggle();
+        });
+        $("#zadania").on("click", function (e) {
+          $("#zadanie0").slideToggle();
+          $("#zadanie1").slideToggle();
+          $("#zadanie2").slideToggle();
+        });
+      </script>
+      <main>
+        <article>
+          <h2>Liczby zespolone</h2>
+          <h2>\[\mathrm{e}^{\mathrm{i}\pi} + 1 = 0\]</h2>
+          <section>
+            <h3 id="zbior_zespolony">Zbiór liczb zespolonych</h3>
+            <p>
+              <b>Zbiór liczb zespolonych</b> oznaczamy jako \(\mathbb{C}\) i
+              definiujemy jako \(\mathbb{C} = \{x + y\mathrm{i} : x,y \in
+              \mathbb{R}\}\), gdzie \(\mathrm{i}^2 = -1\).
+            </p>
+
+            <h3 id="postac_algebraiczna">Postać algebraiczna</h3>
+            <p>
+              Każdą liczbę zespoloną \(z = (x, y)\) możemy jednoznacznie zapisać
+              w postaci \[z = x + y\mathrm{i},\] gdzie \(x,y \in \mathbb{R}\).
+              To wyrażenie nazywamy
+              <b>postacią algebraiczną</b> liczby zespolonej.
+            </p>
+            <p>
+              <b>Częścią rzeczywistą \(Re(z)\)</b> liczby zespolonej \(z\),
+              która jest postaci \(z = x + y\mathrm{i}\), gdzie \(x,y \in
+              \mathbb{R}\) jest \(x\), natomiast
+              <b>częścią urojoną \(Im(z)\)</b> jest \(y\) i oznaczamy \[Re(x +
+              y\mathrm{i})=x,\] \[Im(x + y\mathrm{i})=y.\]
+            </p>
+            <p>
+              Dwie liczby zespolone są sobie równe jeśli ich części rzeczywiste
+              są równe, oraz części urojone są równe. \[z_1 = z_2
+              \Leftrightarrow Re(z_1) = Re(z_2) \land Im(z_1) = Im(z_2).\]
+            </p>
+            <p>
+              Dla dowolnych liczb \(z_1, z_2 \in \mathbb{C}\) zachodzi
+              \[Re(z_1+z_2) = Re(z_1) + Re(z_2),\] \[Im(z_1+z_2) = Im(z_1) +
+              Im(z_2).\]
+            </p>
+            <p>
+              <b>Sumą</b> dwóch liczb zespolonych \(z_1 = x_1 + y_1\mathrm{i}\)
+              i \(z_2 = x_2 + y_2\mathrm{i}\) nazywamy liczbę zespoloną \(z =
+              z_1 + z_2\) i wyliczamy z poniższego wzoru \[z = z_1 + z_2 = (x_1
+              + x_2) + (y_1 + y_2)\mathrm{i}.\]
+            </p>
+            <p>
+              <b>Iloczynem</b> dwóch liczb zespolonych \(z_1 = x_1 +
+              y_1\mathrm{i}\) i \(z_2 = x_2 + y_2\mathrm{i}\) nazywamy liczbę
+              zespoloną \(z = z_1 \cdot z_2\) i wyliczamy z poniższego wzoru \[z
+              = z_1 \cdot z_2 = (x_1 \cdot x_2 - y_1 \cdot y_2) + (x_1 \cdot y_2
+              + x_2 \cdot y_1)\mathrm{i}.\]
+            </p>
+            <p>
+              Niech \(z = x + y\mathrm{i}\), gdzie \(x,y \in \mathbb{R}\)
+              <b>liczbą sprzężoną </b> z \(z\) (sprzężeniem \(z\)) nazywamy
+              liczbę zespoloną postaci \[\overline{z} = x - y\mathrm{i}.\]
+            </p>
+            <p>
+              Dla dwóch liczb \(z_1, z_2 \in \mathbb{C}\) zachodzi
+              \[\overline{(z_1 + z_2)} = \overline{z_1} + \overline{z_2};\]
+              \[\overline{(z_1 \cdot z_2)} = \overline{z_1} \cdot
+              \overline{z_2};\] \[\overline{(\overline{z_1})} = z_1;\]
+              \[\overline{z_1} + z_1 = 2Re(z).\]
+            </p>
+            <p>
+              <b>Moduł</b> liczby zespolonej \(z = x + y\mathrm{i}\), gdzie
+              \(x,y \in \mathbb{R}\) oznaczamy jako \(|z|\) i wyliczamy z
+              poniższego wzoru \[ |z| = \sqrt{x^2 + y^2}.\]
+            </p>
+            <p>
+              Dla dwóch liczb \(z_1, z_2 \in \mathbb{C}\) zachodzi \[|Re(z)|
+              \leq |z|;\] \[|Im(z)| \leq |z|;\] \[|z_1 + z_2| \leq |z_1| +
+              |z_2|;\] \[|z_1 \cdot z_2| = |z_1| \cdot |z_2|;\] \[|z| =
+              |\overline{z}| = |-z|;\] \[z \cdot \overline{z} = |z|^2.\]
+            </p>
+
+            <h3 id="postac_trygonometryczna">Postać trygonometryczna</h3>
+            <p>
+              Niech \(z = x + y\mathrm{i}\), gdzie \(x,y \in \mathbb{R} , z \neq
+              0\), \[z = |z| \left( \frac{x}{|z|} +
+              \mathrm{i}\frac{y}{|z|}\right) = |z| \left( \cos(\varphi + 2k\pi)
+              + \mathrm{i}\sin(\varphi + 2k\pi)\right). \] Takie wyrażenie
+              nazywamy
+              <b>postacią trygonometryczną</b> liczby zespolonej \(z\).
+            </p>
+            <p>
+              Kąt \(\varphi \) nazywamy <b>argumentem</b> liczby zespolonej \(
+              z\) i oznaczamy \( arg \left(z\right)\). Argument, który leży w
+              przedziale \([0, 2\pi]\) nazywamy <b>argumentem głównym</b> i
+              oznaczamy \(Arg(z)\). Argument liczby zespolonej to miara kąta
+              zorientowanego jaki tworzy wektor \( \overrightarrow{0Z}\) z
+              dodatnia osią oX.
+            </p>
+
+            <div id="jxgbox" class="jxgbox"></div>
+            <script>
+              // Create the JSXGraph board
+              const board = JXG.JSXGraph.initBoard("jxgbox", {
+                boundingbox: [-2, 2, 2, -2], // Bounding box for the board
+                axis: true, // Display the axis
+                keepaspectratio: true, // Keep aspect ratio
+              });
+
+              // Draw a circle with radius 1 and center at (0, 0)
+              const circle = board.create("circle", [[0, 0], 1], {
+                strokeColor: "#6A0AD8",
+                strokeWidth: 2,
+                fixed: true, // Make the circle fixed
+              });
+
+              // Add a movable point to represent a complex number
+              const movablePoint = board.create("glider", [1, 0, circle], {
+                name: "1 + 0i",
+                size: 3,
+                color: "#2FEC29",
+                showInfobox: true, // Show infobox
+                snapToGrid: true, // Snap point to grid
+                snapSizeX: Math.PI / 180, // Grid size for x-axis (in radians)
+                snapSizeY: Math.PI / 180, // Grid size for y-axis (in radians)
+              });
+
+              // Draw an arrow from the origin to the movable point
+              const arrow = board.create("arrow", [[0, 0], movablePoint], {
+                strokeColor: "#FF0000",
+                strokeWidth: 2,
+              });
+
+              // Create fixed points at (0, 0) and (1, 0)
+              const origin = board.create("point", [0, 0], {
+                fixed: true,
+                visible: false, // Hide the point
+              });
+
+              const fixedPoint = board.create("point", [1, 0], {
+                fixed: true,
+                visible: false, // Hide the point
+              });
+
+              // Draw the angle
+              const angle = board.create(
+                "angle",
+                [fixedPoint, origin, movablePoint],
+                {
+                  radius: 0.5, // Radius of the arc
+                  withLabel: false, // Disable default label
+                }
+              );
+
+              // Add custom text to display angle in degrees
+              const angleText = board.create(
+                "text",
+                [
+                  function () {
+                    return movablePoint.X() / 2;
+                  },
+                  function () {
+                    return movablePoint.Y() / 2;
+                  },
+                  function () {
+                    return ((angle.Value() * 180) / Math.PI).toFixed(2) + "°";
+                  },
+                ],
+                {
+                  fontSize: 14,
+                }
+              );
+
+              function updateLabel() {
+                const x = movablePoint.X(); // Get the x-coordinate
+                const y = movablePoint.Y(); // Get the y-coordinate
+                movablePoint.setAttribute({
+                  name: `${x.toFixed(2)} + ${y.toFixed(2)}i`,
+                }); // Update the label
+              }
+
+              // Register event listener for the point
+              movablePoint.on("drag", updateLabel);
+            </script>
+            <p>
+              Dwie niezerowe liczby zespolone są sobie równe jeśli ich moduły są
+              równe, oraz argumenty są równe. \[z_1 = z_2 \Leftrightarrow |z_1|
+              = |z_2| \land arg(z_1) = arg(z_2).\]
+            </p>
+            <p>
+              <b>Iloczynem</b> dwóch liczb zespolonych \(z_1 = |z_1| \left(
+              \cos(\varphi_1) + \mathrm{i}\sin(\varphi_1) \right)\) i \(z_2 =
+              |z_2| \left( \cos(\varphi_2) + \mathrm{i}\sin(\varphi_2) \right)\)
+              nazywamy liczbę zespoloną \(z = z_1 \cdot z_2\) i wyliczamy z
+              poniższego wzoru \[z = z_1 \cdot z_2 = |z_1| \cdot |z_2| \left(
+              \cos(\varphi_1 + \varphi_2) + \mathrm{i}\sin(\varphi_1 +
+              \varphi_2) \right).\]
+            </p>
+            <p>
+              Dla dowolnych liczb \(z_1, z_2 \in \mathbb{C}\) zachodzi \[|z_1
+              \cdot z_2| = |z_1| \cdot |z_2|;\] \[arg(z_1 \cdot z_2) = arg(z_1)
+              + arg(z_2).\]
+            </p>
+            <p>
+              <b>Wzór de Moivre'a</b>: dla dowolnej liczby zespolonej \(z = |z|
+              \left(\cos\varphi + \mathrm{i}\sin\varphi\right)\) oraz dowolnej
+              liczby całkowitej \(n\) zachodzi \[z^n = |z|^n
+              \left(\cos(n\varphi) + \mathrm{i}\sin(n\varphi)\right).\]
+            </p>
+            <p>
+              Niech \(n \in \mathbb{N}\). Liczba \(w \in \mathbb{C}\) jest
+              <b>pierwiastkiem</b> stopnia \(n\) z liczby \(z \in \mathbb{C}\)
+              jeśli \[w^n = z.\]
+            </p>
+            <p>
+              Niech \(z = |z| \left( \cos\varphi + \mathrm{i}\sin\varphi \right)
+              \neq 0\). Istnieje \(n\) różnych pierwiastków stopnia \(n\) z
+              liczby \(z\), które możemy zapisać jako \[w_k = \sqrt[n]{|z|}
+              \left( \cos\left(\frac{\varphi + 2k\pi}{n}\right) +
+              \mathrm{i}\sin\left(\frac{\varphi + 2k\pi}{n}\right) \right),\]
+              gdzie \(k = 0, 1, 2, \ldots, n-1\).
+            </p>
+
+            <h3 id="postac_wykladnicza">Postać wykładnicza</h3>
+            <p>
+              Definiujemy \(\mathrm{e}^{\mathrm{i}\varphi} = \cos\varphi +
+              \mathrm{i}\sin\varphi.\) Zatem dla liczby \(z = |z|
+              \left(\cos\varphi + \mathrm{i}\sin\varphi\right)\) mamy \[z = |z|
+              \mathrm{e}^{\mathrm{i}\varphi}.\] Takie wyrażenie nazywamy
+              <b>postacią wykładniczą</b> liczby zespolonej \(z\).
+            </p>
+            <p>
+              Dla dowolnych liczby \(z_1 =
+              |z_1|\mathrm{e}^{\mathrm{i}\varphi_1}\), \(z_2 =
+              |z|\mathrm{e}^{\mathrm{i}\varphi_2}\) zachodzi \[z_1 \cdot z_2 =
+              |z_1| \cdot |z_2| \mathrm{e}^{\mathrm{i}(\varphi_1 +
+              \varphi_2)};\] \[z^n = |z|^n \mathrm{e}^{\mathrm{i}n\varphi};\]
+              \[\mathrm{e}^{\mathrm{i}\varphi} = -1.\]
+            </p>
+            <p>
+              <b>Wzór Eulera</b>: \[\mathrm{e}^{\mathrm{i}\varphi} = \cos\varphi
+              + \mathrm{i}\sin\varphi.\]
+            </p>
+          </section>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

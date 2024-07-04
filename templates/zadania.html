@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>Liczby zespolone</title>
+    <link rel="icon" type="images/png" href="{{ url_for('static', filename='img/ikonka.png') }}">
+    <style>
+      #hidden {
+        display: none;
+        font-size: 300%;
+      }
+      .jxgbox {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+      }
+      ol {
+        padding-left: 20px;
+      }
+      ol.nested {
+        padding-left: 40px;
+      }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <div class="całość">
+      <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"
+      ></script>
+      <header>
+        <h1>Liczby zespolone</h1>
+      </header>
+      <nav class="głowne">
+        <a class="menu active" href="{{ url_for('home') }}">Strona główna</a>
+        <a class="menu" href="{{ url_for('about_authors') }}">O autorach</a>
+        <a class="menu" href="{{ url_for('bibliography') }}">Biblografia</a>
+      </nav>
+      <nav class="boczne">
+        <a id="liczby_zespolone" class="bocznne tutaj" href="#">LICZBY ZESPOLONE</a>
+            <a id="bok0" class="bocznne" href="{{ url_for('imaginary_numbers') }}#zbior_zespolony">zbiór liczb zespolonych</a>
+            <a id="bok1" class="bocznne" href="{{ url_for('imaginary_numbers') }}#postac_algebraiczna">postać algebraiczna</a>
+            <a id="bok2" class="bocznne" href="{{ url_for('imaginary_numbers') }}#postac_trygonometryczna">postać trygonometryczna</a>
+            <a id="bok3" class="bocznne" href="{{ url_for('imaginary_numbers') }}#postac_wykladnicza">postać wykładnicza</a>
+            <a id="zadania" class="bocznne tutaj" href="#">ZADANIA</a>
+            <a id="bok0zadania" class="bocznne" href="{{ url_for('exercises') }}#zadanie1">zadanie 1</a>
+            <a id="bok1zadania" class="bocznne" href="{{ url_for('exercises') }}#zadanie2">zadanie 2</a>
+            <a id="bok2zadania" class="bocznne" href="{{ url_for('exercises') }}#zadanie3">zadanie 3</a>
+      </nav>
+      <script>
+        $("#liczby_zespolone").on("click", function (e) {
+          $("#bok0").slideToggle();
+          $("#bok1").slideToggle();
+          $("#bok2").slideToggle();
+          $("#bok3").slideToggle();
+        });
+        $("#zadania").on("click", function (e) {
+          $("#bok0zadania").slideToggle();
+          $("#bok1zadania").slideToggle();
+          $("#bok2zadania").slideToggle();
+        });
+      </script>
+      <main>
+        <article>
+          <h2>Zadania</h2>
+          <section>
+            <h3 id="zadanie1">Zadanie 1</h3>
+            <p>Wykonać działania:</p>
+            <ol type="a">
+              <li>\(\mathrm{i} \cdot \mathrm{i}\)</li>
+              {% block content_zad1 %}
+              <form action="#" method="post">
+	              <p>odpowiedź:</p>
+	              <p><input type="text" name="zad1" /></p>
+	              <p><input type="submit" value="submit"/></p>
+                {% if results.get('zad1') %}
+                  {% if results['zad1'] %}
+                    <p style="color: green;">Poprawna odpowiedź!</p>
+                  {% else %}
+                    <p style="color: red;">Niepoprawna odpowiedź.</p>
+                  {% endif %}
+                {% endif %}
+              </form>
+              {% endblock %}
+              <li>\((-2+3\mathrm{i})+(7-8\mathrm{i})\)</li>
+              {% block content_zad2 %}
+              <form action="#" method="post">
+	              <p>odpowiedź:</p>
+	              <p><input type="text" name="zad2" /></p>
+	              <p><input type="submit" value="submit"/></p>
+              </form>
+              {% endblock %}
+              <li>\((4\mathrm{i}-3)-(1+10\mathrm{i})\)</li>
+              {% block content_zad3 %}
+              <form action="#" method="post">
+	              <p>odpowiedź:</p>
+	              <p><input type="text" name="zad3" /></p>
+	              <p><input type="submit" value="submit"/></p>
+              </form>
+              {% endblock %}
+              <li>\((1 + \mathrm{i})^2\)</li>
+              {% block content_zad4 %}
+              <form action="#" method="post">
+	              <p>odpowiedź:</p>
+	              <p><input type="text" name="zad4" /></p>
+	              <p><input type="submit" value="submit"/></p>
+              </form>
+              {% endblock %}
+            </ol>
+
+            <h3 id="zadanie2">Zadanie 2</h3>
+            <p>Obliczyć moduły liczb zespolonych:</p>
+            <ol type="a">
+              <li>\(4\mathrm{i}\)</li>
+              {% block content_zad5 %}
+              <form action="#" method="post">
+	              <p>odpowiedź:</p>
+	              <p><input type="text" name="zad5" /></p>
+	              <p><input type="submit" value="submit"/></p>
+              </form>
+              {% endblock %}
+              <li>\(12\mathrm{i}-5\)</li>
+              {% block content_zad6 %}
+              <form action="#" method="post">
+	              <p>odpowiedź:</p>
+	              <p><input type="text" name="zad6" /></p>
+	              <p><input type="submit" value="submit"/></p>
+              </form>
+              {% endblock %}
+              <li>\(\sqrt{7}+\sqrt{29}\mathrm{i}\)</li>
+              {% block content_zad7 %}
+              <form action="#" method="post">
+	              <p>odpowiedź:</p>
+	              <p><input type="text" name="zad7" /></p>
+	              <p><input type="submit" value="submit"/></p>
+              </form>
+              {% endblock %}
+              <li>\((\sqrt{5}-\sqrt{3})+(\sqrt{5}+\sqrt{3})\mathrm{i}\)</li>
+              {% block content_zad8 %}
+              <form action="#" method="post">
+	              <p>odpowiedź:</p>
+	              <p><input type="text" name="zad8" /></p>
+	              <p><input type="submit" value="submit"/></p>
+              </form>
+              {% endblock %}
+            </ol>
+
+            <h3 id="zadanie3">Zadanie 3</h3>
+            <p>
+              Obliczyć wartość wyrażeń (wynik podać w postaci algebraicznej):
+            </p>
+            <ol type="a">
+              <li>\((1+\mathrm{i})^7\)</li>
+              {% block content_zad9 %}
+              <form action="#" method="post">
+	              <p>odpowiedź:</p>
+	              <p><input type="text" name="zad9" /></p>
+	              <p><input type="submit" value="submit"/></p>
+              </form>
+              {% endblock %}
+              <li>\(\left(\frac{1-\mathrm{i}}{\sqrt{3}+\mathrm{i}}\right)^6\)</li>
+              {% block content_zad10 %}
+              <form action="#" method="post">
+	              <p>odpowiedź:</p>
+	              <p><input type="text" name="zad10" /></p>
+	              <p><input type="submit" value="submit"/></p>
+              </form>
+              {% endblock %}
+              <li>
+                \(\left(-\cos{\frac{\pi}{7}}+\mathrm{i}\sin{\frac{\pi}{7}}\right)^{14}\)
+              </li>
+              {% block content_zad11 %}
+              <form action="#" method="post">
+	              <p>odpowiedź:</p>
+	              <p><input type="text" name="zad11" /></p>
+	              <p><input type="submit" value="submit"/></p>
+              </form>
+              {% endblock %}
+            </ol>
+          </section>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

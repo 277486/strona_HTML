@@ -1,0 +1,136 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.całość {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+body {
+    background-color: white;
+}
+
+header {
+    background-color: #fdd7f5;
+    color: #191a17;
+    text-align: center;
+    hyphens: auto;
+    padding: 25px 10px;
+    margin-left: 200px;
+}
+
+nav.głowne {
+    background-color: #f3c2ef;
+    margin-left: 200px;
+}
+
+a.menu {
+    display: inline-block;
+    width: 33%;
+    height: 35px;
+    padding: 5px 10px;
+    color: #191a17;
+    text-decoration: none;
+    text-align: center;
+}
+
+a.menu:hover {
+    font-size: 20px;
+}
+a.bocznne:hover {
+    color: aqua;
+} 
+
+a.active {
+    background-color: rgb(226, 127, 208);
+}
+
+nav.boczne {
+    width: 200px;
+    background: #f2f2f2;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+  }
+  nav.boczne a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #ddd;
+  }
+
+article {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    background-color: white;
+}
+
+article h2 {
+    font-size: 30px;
+    text-align: center;
+    margin: 0 10% 20px;
+    color: #8a3676;
+}
+
+section h1 {
+    font-size: 35px;
+    text-align: center;
+    margin: 0 10% 20px;
+    color: #8a3676;
+}
+
+section h2 {
+    font-size: 30px;
+    text-align: center;
+    margin: 0 10% 20px;
+    color: #8a3676;
+}
+
+section h3 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom:10px;
+    color: #3b2840;
+}
+
+section img {
+    float: left;
+    padding: 10px;
+    width: 50%;
+}
+p {
+    text-align: justify;
+    padding: 10px 10px 0px;
+    
+}
+
+footer {
+    margin: 10px;
+    text-align: left;
+}
+
+
+.jxgbox {
+    width: 500px;
+    height: 500px;
+}
+   
+
+script {
+    padding: 20px;
+}
+
+li {
+    margin-top: 10px;
+    margin-left: 10px;
+}
