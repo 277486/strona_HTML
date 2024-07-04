@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Liczby zespolone</title>
     <link
       rel="icon"
       type="images/png"
       href="{{ url_for('static', filename='img/ikonka.png') }}"
-    />
+    >
     <style>
       #hidden {
         display: none;
@@ -29,7 +29,7 @@
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
-    />
+    >
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script
       id="MathJax-script"
@@ -128,13 +128,13 @@
             <h3 id="zadanie1">Zadanie 1</h3>
             <p>Wykonać działania:</p>
             <ol type="a">
-              <li>\(\mathrm{i} \cdot \mathrm{i}\)</li>
+              <li>\(\mathrm{i} \cdot \mathrm{i}\)
               {% block content_zad1 %}
               <form action="{{ url_for('exercises') }}" method="post">
                 <p>odpowiedź:</p>
-                <p><input type="text" name="zad1" /></p>
-                <input type="hidden" name="task_number" value="1" />
-                <input type="submit" value="Wyślij" />
+                <p><input type="text" name="zad1"></p>
+                <input type="hidden" name="task_number" value="1">
+                <input type="submit" value="Wyślij">
                 {% with messages = get_flashed_messages(with_categories=True) %}  
                   {% if messages %}
                     {% for category, msg in messages %} 
@@ -146,13 +146,14 @@
                 {% endwith %}
               </form>
               {% endblock %}
-              <li>\((-2+3\mathrm{i})+(7-8\mathrm{i})\)</li>
+              </li>
+              <li>\((-2+3\mathrm{i})+(7-8\mathrm{i})\)
               {% block content_zad2 %}
               <form action="#" method="post">
                 <p>odpowiedź:</p>
-                <p><input type="text" name="zad2" /></p>
-                <input type="hidden" name="task_number" value="2" />
-                <input type="submit" value="Wyślij" />
+                <p><input type="text" name="zad2"></p>
+                <input type="hidden" name="task_number" value="2">
+                <input type="submit" value="Wyślij">
                 {% with messages = get_flashed_messages(with_categories=True) %}  
                   {% if messages %}
                     {% for category, msg in messages %} 
@@ -164,13 +165,14 @@
                 {% endwith %}
               </form>
               {% endblock %}
-              <li>\((4\mathrm{i}-3)-(1+10\mathrm{i})\)</li>
+              </li>
+              <li>\((4\mathrm{i}-3)-(1+10\mathrm{i})\)
               {% block content_zad3 %}
               <form action="#" method="post">
                 <p>odpowiedź:</p>
-                <p><input type="text" name="zad3" /></p>
-                <input type="hidden" name="task_number" value="3" />
-                <input type="submit" value="Wyślij" />
+                <p><input type="text" name="zad3"></p>
+                <input type="hidden" name="task_number" value="3">
+                <input type="submit" value="Wyślij">
                 {% with messages = get_flashed_messages(with_categories=True) %}  
                   {% if messages %}
                     {% for category, msg in messages %} 
@@ -182,13 +184,14 @@
                 {% endwith %}
               </form>
               {% endblock %}
-              <li>\((1 + \mathrm{i})^2\)</li>
+              </li>
+              <li>\((1 + \mathrm{i})^2\)
               {% block content_zad4 %}
               <form action="#" method="post">
                 <p>odpowiedź:</p>
-                <p><input type="text" name="zad4" /></p>
-                <input type="hidden" name="task_number" value="4" />
-                <input type="submit" value="Wyślij" />
+                <p><input type="text" name="zad4"></p>
+                <input type="hidden" name="task_number" value="4">
+                <input type="submit" value="Wyślij">
                 {% with messages = get_flashed_messages(with_categories=True) %}  
                   {% if messages %}
                     {% for category, msg in messages %} 
@@ -200,36 +203,38 @@
                 {% endwith %}
               </form>
               {% endblock %}
+              </li>
             </ol>
 
             <h3 id="zadanie2">Zadanie 2</h3>
             <p>Obliczyć moduły liczb zespolonych:</p>
             <ol type="a">
-              <li>\(4\mathrm{i}\)</li>
-              {% block content_zad5 %}
-              <form action="#" method="post">
-                <p>odpowiedź:</p>
-                <p><input type="text" name="zad5" /></p>
-                <input type="hidden" name="task_number" value="5" />
-                <input type="submit" value="Wyślij" />
-                {% with messages = get_flashed_messages(with_categories=True) %}  
-                  {% if messages %}
-                    {% for category, msg in messages %} 
-                      {% if msg.startswith('zad5:') %}
-                        <p class="{{ category }}">{{ msg[5:] }}</p>
-                      {% endif %} 
-                    {% endfor %} 
-                  {% endif %} 
-                {% endwith %}
-              </form>
-              {% endblock %}
-              <li>\(12\mathrm{i}-5\)</li>
+              <li>\(4\mathrm{i}\)
+                {% block content_zad5 %}
+                <form action="#" method="post">
+                  <p>odpowiedź:</p>
+                  <p><input type="text" name="zad5"></p>
+                  <input type="hidden" name="task_number" value="5">
+                  <input type="submit" value="Wyślij">
+                  {% with messages = get_flashed_messages(with_categories=True) %}  
+                    {% if messages %}
+                      {% for category, msg in messages %} 
+                        {% if msg.startswith('zad5:') %}
+                          <p class="{{ category }}">{{ msg[5:] }}</p>
+                        {% endif %} 
+                      {% endfor %} 
+                    {% endif %} 
+                  {% endwith %}
+                </form>
+                {% endblock %}
+              </li>
+              <li>\(12\mathrm{i}-5\)
               {% block content_zad6 %}
               <form action="#" method="post">
                 <p>odpowiedź:</p>
-                <p><input type="text" name="zad6" /></p>
-                <input type="hidden" name="task_number" value="6" />
-                <input type="submit" value="Wyślij" />
+                <p><input type="text" name="zad6"></p>
+                <input type="hidden" name="task_number" value="6">
+                <input type="submit" value="Wyślij">
                 {% with messages = get_flashed_messages(with_categories=True) %}  
                   {% if messages %}
                     {% for category, msg in messages %} 
@@ -241,13 +246,14 @@
                 {% endwith %}
               </form>
               {% endblock %}
-              <li>\(\sqrt{7}+\sqrt{29}\mathrm{i}\)</li>
+              </li>
+              <li>\(\sqrt{7}+\sqrt{29}\mathrm{i}\)
               {% block content_zad7 %}
               <form action="#" method="post">
                 <p>odpowiedź:</p>
-                <p><input type="text" name="zad7" /></p>
-                <input type="hidden" name="task_number" value="7" />
-                <input type="submit" value="Wyślij" />
+                <p><input type="text" name="zad7"></p>
+                <input type="hidden" name="task_number" value="7">
+                <input type="submit" value="Wyślij">
                 {% with messages = get_flashed_messages(with_categories=True) %}  
                   {% if messages %}
                     {% for category, msg in messages %} 
@@ -259,13 +265,14 @@
                 {% endwith %}
               </form>
               {% endblock %}
-              <li>\((\sqrt{5}-\sqrt{3})+(\sqrt{5}+\sqrt{3})\mathrm{i}\)</li>
+              </li>
+              <li>\((\sqrt{5}-\sqrt{3})+(\sqrt{5}+\sqrt{3})\mathrm{i}\)
               {% block content_zad8 %}
               <form action="#" method="post">
                 <p>odpowiedź:</p>
-                <p><input type="text" name="zad8" /></p>
-                <input type="hidden" name="task_number" value="8" />
-                <input type="submit" value="Wyślij" />
+                <p><input type="text" name="zad8"></p>
+                <input type="hidden" name="task_number" value="8">
+                <input type="submit" value="Wyślij">
                 {% with messages = get_flashed_messages(with_categories=True) %}  
                   {% if messages %}
                     {% for category, msg in messages %} 
@@ -277,6 +284,7 @@
                 {% endwith %}
               </form>
               {% endblock %}
+              </li>
             </ol>
 
             <h3 id="zadanie3">Zadanie 3</h3>
@@ -284,13 +292,13 @@
               Obliczyć wartość wyrażeń (wynik podać w postaci algebraicznej):
             </p>
             <ol type="a">
-              <li>\((1+\mathrm{i})^7\)</li>
+              <li>\((1+\mathrm{i})^7\)
               {% block content_zad9 %}
               <form action="#" method="post">
                 <p>odpowiedź:</p>
-                <p><input type="text" name="zad9" /></p>
-                <input type="hidden" name="task_number" value="9" />
-                <input type="submit" value="Wyślij" />
+                <p><input type="text" name="zad9"></p>
+                <input type="hidden" name="task_number" value="9">
+                <input type="submit" value="Wyślij">
                 {% with messages = get_flashed_messages(with_categories=True) %}  
                   {% if messages %}
                     {% for category, msg in messages %} 
@@ -302,15 +310,15 @@
                 {% endwith %}
               </form>
               {% endblock %}
+              </li>
               <li>
                 \(\left(\frac{1-\mathrm{i}}{\sqrt{3}+\mathrm{i}}\right)^6\)
-              </li>
               {% block content_zad10 %}
               <form action="#" method="post">
                 <p>odpowiedź:</p>
-                <p><input type="text" name="zad10" /></p>
-                <input type="hidden" name="task_number" value="10" />
-                <input type="submit" value="Wyślij" />
+                <p><input type="text" name="zad10"></p>
+                <input type="hidden" name="task_number" value="10">
+                <input type="submit" value="Wyślij">
                 {% with messages = get_flashed_messages(with_categories=True) %}  
                   {% if messages %}
                     {% for category, msg in messages %} 
@@ -322,15 +330,15 @@
                 {% endwith %}
               </form>
               {% endblock %}
+              </li>
               <li>
                 \(\left(-\cos{\frac{\pi}{7}}+\mathrm{i}\sin{\frac{\pi}{7}}\right)^{14}\)
-              </li>
               {% block content_zad11 %}
               <form action="#" method="post">
                 <p>odpowiedź:</p>
-                <p><input type="text" name="zad11" /></p>
-                <input type="hidden" name="task_number" value="11" />
-                <input type="submit" value="Wyślij" />
+                <p><input type="text" name="zad11"></p>
+                <input type="hidden" name="task_number" value="11">
+                <input type="submit" value="Wyślij">
                 {% with messages = get_flashed_messages(with_categories=True) %}  
                   {% if messages %}
                     {% for category, msg in messages %} 
@@ -342,131 +350,132 @@
                 {% endwith %}
               </form>
               {% endblock %}
+              </li>
             </ol>
           
         
         
-        <h3 id="zadanie4">Zabawa z wykresen</h3>
-        <div class="jxgbox" id="jxgbox" style="width: 500px; height: 500px"></div>
-        <form id="complexForm" method="POST" action="/send_complex">
-          <label for="realPart">Część rzeczywista:</label>
-          <input type="text" id="realPart" name="realPart" /><br />
-          <label for="imaginaryPart">Część urojona:</label>
-          <input type="text" id="imaginaryPart" name="imaginaryPart" /><br />
-          <input type="submit" value="Wyślij" />
-        </form>
-        </div>
-      </section>
-        <script>
-          board = JXG.JSXGraph.initBoard("jxgbox", {
-            boundingbox: [-10, 10, 10, -10],
-            axis: true,
-          });
-
-          document.getElementById("complexForm").onsubmit = function (event) {
-            event.preventDefault();
-            var real = parseFloat(document.getElementById("realPart").value);
-            var imag = parseFloat(document.getElementById("imaginaryPart").value);
-          
-            if (board) {
-              JXG.JSXGraph.freeBoard(board);
-            }
-
-            board = JXG.JSXGraph.initBoard("jxgbox", {
-              boundingbox: [-10, 10, 10, -10],
-              axis: true,
-            });
-
-            plotComplexNumber(real, imag);
-
-            var data = {
-              realPart: real,
-              imaginaryPart: imag,
-            };
-
-            fetch("/send_complex", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(data),
-            })
-              .then((response) => response.json())
-              .then((data) => {
-                console.log("Success:", data);
-              })
-              .catch((error) => {
-                console.error("Error:", error);
+            <h3 id="zadanie4">Zabawa z wykresen</h3>
+            <div class="jxgbox" id="jxgbox" style="width: 500px; height: 500px"></div>
+              <form id="complexForm" method="POST" action="/send_complex">
+                <label for="realPart">Część rzeczywista:</label>
+                <input type="text" id="realPart" name="realPart"><br>
+                <label for="imaginaryPart">Część urojona:</label>
+                <input type="text" id="imaginaryPart" name="imaginaryPart"><br>
+                <input type="submit" value="Wyślij">
+              </form>
+            <script>
+              board = JXG.JSXGraph.initBoard("jxgbox", {
+                boundingbox: [-10, 10, 10, -10],
+                axis: true,
               });
-          };
 
-          function plotComplexNumber(real, imag) {
-            var maxAxisValue = Math.max(Math.abs(real)+2, Math.abs(imag)+2, 10);
-            board.setBoundingBox([-maxAxisValue, maxAxisValue, maxAxisValue, -maxAxisValue]);
+              document.getElementById("complexForm").onsubmit = function (event) {
+                event.preventDefault();
+                var real = parseFloat(document.getElementById("realPart").value);
+                var imag = parseFloat(document.getElementById("imaginaryPart").value);
+              
+                if (board) {
+                  JXG.JSXGraph.freeBoard(board);
+                }
 
-            var point = board.create("point", [real, imag], {
-              name: "z",
-              size: 4,
-              face: "o",
-              strokeColor: "#d239ed",
-              fixed: true,
-            });
-            var line = board.create(
-              "line",
-              [
-                [0, 0],
-                [real, imag],
-              ],
-              {
-                straightFirst: false,
-                straightLast: false,
-                strokeWidth: 2,
-                strokeColor: "#4d42c2",
-                fixed: true,
-              }
-            );
+                board = JXG.JSXGraph.initBoard("jxgbox", {
+                  boundingbox: [-10, 10, 10, -10],
+                  axis: true,
+                });
 
-            var angle = Math.atan2(imag, real);
-            var radius = Math.sqrt(real * real + imag * imag);
+                plotComplexNumber(real, imag);
 
-            const origin = board.create("point", [0, 0], {
-              fixed: true,
-              visible: false,
-            });
+                var data = {
+                  realPart: real,
+                  imaginaryPart: imag,
+                };
 
-            const fixedPoint = board.create("point", [real * 0.5, 0], {
-              fixed: true,
-              visible: false,
-            });
+                fetch("/send_complex", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(data),
+                })
+                  .then((response) => response.json())
+                  .then((data) => {
+                    console.log("Success:", data);
+                  })
+                  .catch((error) => {
+                    console.error("Error:", error);
+                  });
+                };
 
-            const drawPoint = board.create("point", [real, imag], {
-              fixed: true,
-              visible: false,
-            });
+                function plotComplexNumber(real, imag) {
+                  var maxAxisValue = Math.max(Math.abs(real)+2, Math.abs(imag)+2, 10);
+                  board.setBoundingBox([-maxAxisValue, maxAxisValue, maxAxisValue, -maxAxisValue]);
 
-            board.create(
-              "arc",
-              [
-                origin, 
-                fixedPoint,
-                drawPoint,
-              ],
-              {
-                strokeColor: "#30297d",
-                strokeWidth: 2,
-                fixed: true,
-              }
-            );
+                  var point = board.create("point", [real, imag], {
+                    name: "z",
+                    size: 4,
+                    face: "o",
+                    strokeColor: "#d239ed",
+                    fixed: true,
+                  });
+                  var line = board.create(
+                    "line",
+                    [
+                      [0, 0],
+                      [real, imag],
+                    ],
+                    {
+                      straightFirst: false,
+                      straightLast: false,
+                      strokeWidth: 2,
+                      strokeColor: "#4d42c2",
+                      fixed: true,
+                    }
+                  );
 
-            var arrowEnd = [radius * Math.cos(angle), radius * Math.sin(angle)];
-            board.create("arrow", [[0, 0], arrowEnd], {
-              strokeColor: "#30297d",
-              strokeWidth: 2,
-              fixed: true,
-            });
-          }
-      </script>
-    </article>
-  </main>
+                  var angle = Math.atan2(imag, real);
+                  var radius = Math.sqrt(real * real + imag * imag);
+
+                  const origin = board.create("point", [0, 0], {
+                    fixed: true,
+                    visible: false,
+                  });
+
+                  const fixedPoint = board.create("point", [real * 0.5, 0], {
+                    fixed: true,
+                    visible: false,
+                  });
+
+                  const drawPoint = board.create("point", [real, imag], {
+                    fixed: true,
+                    visible: false,
+                  });
+
+                  board.create(
+                    "arc",
+                    [
+                      origin, 
+                      fixedPoint,
+                      drawPoint,
+                    ],
+                    {
+                      strokeColor: "#30297d",
+                      strokeWidth: 2,
+                      fixed: true,
+                    }
+                  );
+
+                  var arrowEnd = [radius * Math.cos(angle), radius * Math.sin(angle)];
+                  board.create("arrow", [[0, 0], arrowEnd], {
+                    strokeColor: "#30297d",
+                    strokeWidth: 2,
+                    fixed: true,
+                  });
+                }
+            </script>
+          </section>
+        </article>
+      </main>
+    </div>
   </body>
 </html>

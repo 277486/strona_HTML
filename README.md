@@ -1,1 +1,1 @@
-projekt storny
+projekt strony
