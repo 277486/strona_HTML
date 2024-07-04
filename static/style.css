@@ -155,3 +155,11 @@ li {
     margin-top: 10px;
     margin-left: 10px;
 }
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}

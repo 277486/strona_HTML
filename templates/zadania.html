@@ -134,10 +134,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad1" /></p>
                 <input type="hidden" name="task_number" value="1" />
-                <p><input type="submit" value="submit" /></p>
-                {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %} {% if msg.startswith('zad1:') %}
-                <p>{{ msg[5:] }}</p>
+                <input type="submit" value="Wyślij" />
+                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
+                {% for category, msg in messages %} {% if msg.startswith('zad1:') %}
+                <p class="{{ category }}">{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
@@ -147,10 +147,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad2" /></p>
                 <input type="hidden" name="task_number" value="2" />
-                <p><input type="submit" value="submit" /></p>
-                {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %} {% if msg.startswith('zad2:') %}
-                <p>{{ msg[5:] }}</p>
+                <input type="submit" value="Wyślij" />
+                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
+                {% for category, msg in messages %} {% if msg.startswith('zad2:') %}
+                <p class="{{ category }}">{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
@@ -160,10 +160,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad3" /></p>
                 <input type="hidden" name="task_number" value="3" />
-                <p><input type="submit" value="submit" /></p>
-                {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %} {% if msg.startswith('zad3:') %}
-                <p>{{ msg[5:] }}</p>
+                <input type="submit" value="Wyślij" />
+                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
+                {% for category, msg in messages %} {% if msg.startswith('zad3:') %}
+                <p class="{{ category }}">{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
@@ -173,10 +173,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad4" /></p>
                 <input type="hidden" name="task_number" value="4" />
-                <p><input type="submit" value="submit" /></p>
-                {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %} {% if msg.startswith('zad4:') %}
-                <p>{{ msg[5:] }}</p>
+                <input type="submit" value="Wyślij" />
+                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
+                {% for category, msg in messages %} {% if msg.startswith('zad4:') %}
+                <p class="{{ category }}">{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
@@ -191,10 +191,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad5" /></p>
                 <input type="hidden" name="task_number" value="5" />
-                <p><input type="submit" value="submit" /></p>
-                {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %} {% if msg.startswith('zad5:') %}
-                <p>{{ msg[5:] }}</p>
+                <input type="submit" value="Wyślij" />
+                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
+                {% for category, msg in messages %} {% if msg.startswith('zad5:') %}
+                <p class="{{ category }}">{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
@@ -204,10 +204,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad6" /></p>
                 <input type="hidden" name="task_number" value="6" />
-                <p><input type="submit" value="submit" /></p>
-                {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %} {% if msg.startswith('zad6:') %}
-                <p>{{ msg[5:] }}</p>
+                <input type="submit" value="Wyślij" />
+                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
+                {% for category, msg in messages %} {% if msg.startswith('zad6:') %}
+                <p class="{{ category }}">{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
@@ -217,10 +217,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad7" /></p>
                 <input type="hidden" name="task_number" value="7" />
-                <p><input type="submit" value="submit" /></p>
-                {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %} {% if msg.startswith('zad7:') %}
-                <p>{{ msg[5:] }}</p>
+                <input type="submit" value="Wyślij" />
+                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
+                {% for category, msg in messages %} {% if msg.startswith('zad7:') %}
+                <p class="{{ category }}">{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
@@ -230,10 +230,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad8" /></p>
                 <input type="hidden" name="task_number" value="8" />
-                <p><input type="submit" value="submit" /></p>
-                {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %} {% if msg.startswith('zad8:') %}
-                <p>{{ msg[5:] }}</p>
+                <input type="submit" value="Wyślij" />
+                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
+                {% for category, msg in messages %} {% if msg.startswith('zad8:') %}
+                <p class="{{ category }}">{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
@@ -250,10 +250,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad9" /></p>
                 <input type="hidden" name="task_number" value="9" />
-                <p><input type="submit" value="submit" /></p>
-                {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %} {% if msg.startswith('zad9:') %}
-                <p>{{ msg[5:] }}</p>
+                <input type="submit" value="Wyślij" />
+                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
+                {% for category, msg in messages %} {% if msg.startswith('zad9:') %}
+                <p class="{{ category }}">{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
@@ -265,10 +265,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad10" /></p>
                 <input type="hidden" name="task_number" value="10" />
-                <p><input type="submit" value="submit" /></p>
-                {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %} {% if msg.startswith('zad10:') %}
-                <p>{{ msg[5:] }}</p>
+                <input type="submit" value="Wyślij" />
+                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
+                {% for category, msg in messages %} {% if msg.startswith('zad10:') %}
+                <p class="{{ category }}">{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
@@ -280,10 +280,10 @@
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad11" /></p>
                 <input type="hidden" name="task_number" value="11" />
-                <p><input type="submit" value="submit" /></p>
-                {% with messages = get_flashed_messages() %} {% if messages %}
-                {% for msg in messages %} {% if msg.startswith('zad11:') %}
-                <p>{{ msg[5:] }}</p>
+                <input type="submit" value="Wyślij" />
+                {% with messages = get_flashed_messages(with_categories=True) %}  {% if messages %}
+                {% for category, msg in messages %} {% if msg.startswith('zad11:') %}
+                <p class="{{ category }}">{{ msg[5:] }}</p>
                 {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
@@ -334,15 +334,14 @@
             var angle = Math.atan2(imag, real);
             var radius = Math.sqrt(real * real + imag * imag);
 
-            // Create fixed points at (0, 0) and (1, 0)
             const origin = board.create("point", [0, 0], {
               fixed: true,
-              visible: false, // Hide the point
+              visible: false,
             });
 
             const fixedPoint = board.create("point", [real * 0.5, 0], {
               fixed: true,
-              visible: false, // Hide the point
+              visible: false,
             });
 
             const drawPoint = board.create("point", [real, imag], {
@@ -350,13 +349,12 @@
               visible: false,
             });
 
-            // Draw the arc to represent the angle
             board.create(
               "arc",
               [
-                origin, // center
-                fixedPoint, // radius endpoint on x-axis
-                drawPoint, // point on the circle
+                origin, 
+                fixedPoint,
+                drawPoint,
               ],
               {
                 strokeColor: "#0000ff",
@@ -365,7 +363,6 @@
               }
             );
 
-            // Draw the arrow at the end of the arc
             var arrowEnd = [radius * Math.cos(angle), radius * Math.sin(angle)];
             board.create("arrow", [[0, 0], arrowEnd], {
               strokeColor: "#0000ff",
