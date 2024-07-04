@@ -86,7 +86,7 @@ nav.boczne {
 article h2 {
     font-size: 30px;
     text-align: center;
-    margin: 0 10% 20px;
+    margin: 0 10% ;
     color: #8a3676;
 }
 
@@ -115,9 +115,9 @@ section h3 {
 section.zespolone h3 {
     font-size: 25px;
     text-align: center;
-    margin: 40px auto 25px;
+    margin: 35px auto 25px;
     color: #3b2840;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 section img {
