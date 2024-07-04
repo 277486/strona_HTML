@@ -42,15 +42,17 @@ def about_authors():
 def exercises():
     user_answer = {}
     if request.method == "POST":
-        for i in range(1, 12):
-            name = f"zad{i}"
-            user_answer[name] = request.form.get(name)
+        task_number = request.form.get("task_number")
+        print(task_number)
+        name = f"zad{task_number}"
+        print(name)
+        user_answer[name] = request.form.get(name)
+        if user_answer[name]:
             correct_answer = ex_dict[name]
-            print(user_answer)
             if user_answer[name] in correct_answer:
-                flash("Dobra odpowieź!", "success")
-            if user_answer[name] and user_answer[name] not in correct_answer:
-                flash("Zła odpowiedź!", "error")
+                flash(f"{name}:Dobra odpowiedź!", "success")
+            else:
+                flash(f"{name}:Zła odpowiedź!", "error")
     return render_template("zadania.html", ex_dict=ex_dict, user_answer=user_answer)
 
 

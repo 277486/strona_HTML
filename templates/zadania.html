@@ -124,11 +124,13 @@
               <form action="{{ url_for('exercises') }}" method="post">
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad1" /></p>
+                <input type="hidden" name="task_number" value="1" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
                 {% for msg in messages %}
-                <p>{{ msg }}</p>
-                {% endfor %} {% endif %} {% endwith %}
+                {% if msg.startswith('zad1:') %}
+                <p>{{ msg[5:] }}</p>
+                {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
               <li>\((-2+3\mathrm{i})+(7-8\mathrm{i})\)</li>
@@ -136,11 +138,13 @@
               <form action="#" method="post">
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad2" /></p>
+                <input type="hidden" name="task_number" value="2" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
                 {% for msg in messages %}
-                <p>{{ msg }}</p>
-                {% endfor %} {% endif %} {% endwith %}
+                {% if msg.startswith('zad2:') %}
+                <p>{{ msg[5:] }}</p>
+                {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
               <li>\((4\mathrm{i}-3)-(1+10\mathrm{i})\)</li>
@@ -148,11 +152,13 @@
               <form action="#" method="post">
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad3" /></p>
+                <input type="hidden" name="task_number" value="3" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
                 {% for msg in messages %}
-                <p>{{ msg }}</p>
-                {% endfor %} {% endif %} {% endwith %}
+                {% if msg.startswith('zad3:') %}
+                <p>{{ msg[5:] }}</p>
+                {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
               <li>\((1 + \mathrm{i})^2\)</li>
@@ -160,11 +166,13 @@
               <form action="#" method="post">
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad4" /></p>
+                <input type="hidden" name="task_number" value="4" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
                 {% for msg in messages %}
-                <p>{{ msg }}</p>
-                {% endfor %} {% endif %} {% endwith %}
+                {% if msg.startswith('zad4:') %}
+                <p>{{ msg[5:] }}</p>
+                {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
             </ol>
@@ -177,11 +185,13 @@
               <form action="#" method="post">
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad5" /></p>
+                <input type="hidden" name="task_number" value="5" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
                 {% for msg in messages %}
-                <p>{{ msg }}</p>
-                {% endfor %} {% endif %} {% endwith %}
+                {% if msg.startswith('zad5:') %}
+                <p>{{ msg[5:] }}</p>
+                {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
               <li>\(12\mathrm{i}-5\)</li>
@@ -189,11 +199,13 @@
               <form action="#" method="post">
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad6" /></p>
+                <input type="hidden" name="task_number" value="6" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
                 {% for msg in messages %}
-                <p>{{ msg }}</p>
-                {% endfor %} {% endif %} {% endwith %}
+                {% if msg.startswith('zad6:') %}
+                <p>{{ msg[5:] }}</p>
+                {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
               <li>\(\sqrt{7}+\sqrt{29}\mathrm{i}\)</li>
@@ -201,11 +213,13 @@
               <form action="#" method="post">
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad7" /></p>
+                <input type="hidden" name="task_number" value="7" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
                 {% for msg in messages %}
-                <p>{{ msg }}</p>
-                {% endfor %} {% endif %} {% endwith %}
+                {% if msg.startswith('zad7:') %}
+                <p>{{ msg[5:] }}</p>
+                {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
               <li>\((\sqrt{5}-\sqrt{3})+(\sqrt{5}+\sqrt{3})\mathrm{i}\)</li>
@@ -213,11 +227,13 @@
               <form action="#" method="post">
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad8" /></p>
+                <input type="hidden" name="task_number" value="8" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
                 {% for msg in messages %}
-                <p>{{ msg }}</p>
-                {% endfor %} {% endif %} {% endwith %}
+                {% if msg.startswith('zad8:') %}
+                <p>{{ msg[5:] }}</p>
+                {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
             </ol>
@@ -232,11 +248,13 @@
               <form action="#" method="post">
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad9" /></p>
+                <input type="hidden" name="task_number" value="9" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
                 {% for msg in messages %}
-                <p>{{ msg }}</p>
-                {% endfor %} {% endif %} {% endwith %}
+                {% if msg.startswith('zad9:') %}
+                <p>{{ msg[5:] }}</p>
+                {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
               <li>
@@ -246,11 +264,13 @@
               <form action="#" method="post">
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad10" /></p>
+                <input type="hidden" name="task_number" value="10" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
                 {% for msg in messages %}
-                <p>{{ msg }}</p>
-                {% endfor %} {% endif %} {% endwith %}
+                {% if msg.startswith('zad10:') %}
+                <p>{{ msg[5:] }}</p>
+                {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
               <li>
@@ -260,11 +280,13 @@
               <form action="#" method="post">
                 <p>odpowiedź:</p>
                 <p><input type="text" name="zad11" /></p>
+                <input type="hidden" name="task_number" value="11" />
                 <p><input type="submit" value="submit" /></p>
                 {% with messages = get_flashed_messages() %} {% if messages %}
                 {% for msg in messages %}
-                <p>{{ msg }}</p>
-                {% endfor %} {% endif %} {% endwith %}
+                {% if msg.startswith('zad11:') %}
+                <p>{{ msg[5:] }}</p>
+                {% endif %} {% endfor %} {% endif %} {% endwith %}
               </form>
               {% endblock %}
             </ol>
