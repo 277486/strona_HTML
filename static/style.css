@@ -36,10 +36,12 @@ a.menu {
     color: #191a17;
     text-decoration: none;
     text-align: center;
+    line-height: 25px;
+    box-sizing: border-box;
 }
 
 a.menu:hover {
-    font-size: 20px;
+    transform: scale(1.2);
 }
 a.bocznne:hover {
     color: aqua;
@@ -48,7 +50,13 @@ a.bocznne:hover {
 a.active {
     background-color: rgb(226, 127, 208);
 }
+a.menu.active {
+    background-color: rgb(226, 127, 208);
+}
 
+a.menu.active:hover {
+    transform: scale(1.2);
+}
 nav.boczne {
     width: 200px;
     background: #f2f2f2;
@@ -67,12 +75,13 @@ nav.boczne {
     border-bottom: 1px solid #ddd;
   }
 
-article {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 200px;
+  article {
+    margin: 20px 0px 100px 200px;
     background-color: white;
+    text-align: justify;
 }
+
+
 
 article h2 {
     font-size: 30px;
@@ -103,6 +112,14 @@ section h3 {
     color: #3b2840;
 }
 
+section.zespolone h3 {
+    font-size: 25px;
+    text-align: center;
+    margin: 40px auto 25px;
+    color: #3b2840;
+    padding-top: 30px;
+}
+
 section img {
     float: left;
     padding: 10px;
@@ -112,6 +129,10 @@ p {
     text-align: justify;
     padding: 10px 10px 0px;
     
+}
+
+section.zespolone p {
+    line-height: 1.4; /* Dodano line-height */
 }
 
 footer {
