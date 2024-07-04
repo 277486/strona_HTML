@@ -1,6 +1,7 @@
-from flask import Flask, url_for, render_template, request
+from flask import Flask, render_template, request, flash
 
 app = Flask(__name__)
+app.secret_key = 'supersecretkey'
 
 ex_dict = {'zad1': [-1], 'zad2': ['5 - 5i', '5-5i', '-5i + 5', '-5i+5'],
            'zad3': ['-4 - 6i', '-4-6i', '-6i - 4', '-6i-4'],
@@ -31,7 +32,6 @@ def about_authors():
 
 @app.route("/zadania", methods=["POST", "GET"])
 def exercises():
-    results = {}
     user_answer = {}
     if request.method == "POST":
         for i in range(1, 12):
@@ -39,10 +39,10 @@ def exercises():
             user_answer[name] = request.form[name]
             correct_answer = ex_dict[name]
             if user_answer[name] in correct_answer:
-                results[name] = True
-            if user_answer[name] not in correct_answer:
-                results[name] = False
-    return render_template("zadania.html", ex_dict=ex_dict, results=results, user_answer=user_answer)
+                flash("Dobra odpowieź!", "success")
+            if user_answer[name] and user_answer[name] not in correct_answer:
+                flash("Zła odpowiedź!", "error")
+    return render_template("zadania.html", ex_dict=ex_dict, user_answer=user_answer)
 
 
 if __name__ == "__main__":

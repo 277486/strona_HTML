@@ -77,17 +77,17 @@
             <ol type="a">
               <li>\(\mathrm{i} \cdot \mathrm{i}\)</li>
               {% block content_zad1 %}
-              <form action="#" method="post">
+              <form action="{{ url_for('exercises') }}" method="post">
 	              <p>odpowiedź:</p>
 	              <p><input type="text" name="zad1" /></p>
 	              <p><input type="submit" value="submit"/></p>
-                {% if results.get('zad1') is not none %}
-                  {% if results['zad1'] %}
-                    <p style="color: green;">Poprawna odpowiedź!</p>
-                  {% else %}
-                    <p style="color: red;">Niepoprawna odpowiedź.</p>
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    {% for msg in messages %}
+                      <p>{{ msg }}</p>
+                    {% endfor %}
                   {% endif %}
-                {% endif %}
+                {% endwith %}
               </form>
               {% endblock %}
               <li>\((-2+3\mathrm{i})+(7-8\mathrm{i})\)</li>
