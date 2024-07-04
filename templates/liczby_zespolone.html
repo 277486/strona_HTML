@@ -196,59 +196,52 @@
 
             <div id="jxgbox" class="jxgbox"></div>
             <script>
-              // Create the JSXGraph board
               const board = JXG.JSXGraph.initBoard("jxgbox", {
-                boundingbox: [-2, 2, 2, -2], // Bounding box for the board
-                axis: true, // Display the axis
-                keepaspectratio: true, // Keep aspect ratio
+                boundingbox: [-2, 2, 2, -2],
+                axis: true,
+                keepaspectratio: true,
               });
 
-              // Draw a circle with radius 1 and center at (0, 0)
               const circle = board.create("circle", [[0, 0], 1], {
                 strokeColor: "#6A0AD8",
                 strokeWidth: 2,
-                fixed: true, // Make the circle fixed
+                fixed: true,
               });
 
-              // Add a movable point to represent a complex number
               const movablePoint = board.create("glider", [1, 0, circle], {
                 name: "1 + 0i",
                 size: 3,
                 color: "#2FEC29",
-                showInfobox: true, // Show infobox
-                snapToGrid: true, // Snap point to grid
-                snapSizeX: Math.PI / 180, // Grid size for x-axis (in radians)
-                snapSizeY: Math.PI / 180, // Grid size for y-axis (in radians)
+                showInfobox: true,
+                snapToGrid: true,
+                snapSizeX: Math.PI / 180,
+                snapSizeY: Math.PI / 180,
               });
 
-              // Draw an arrow from the origin to the movable point
               const arrow = board.create("arrow", [[0, 0], movablePoint], {
                 strokeColor: "#FF0000",
                 strokeWidth: 2,
               });
 
-              // Create fixed points at (0, 0) and (1, 0)
               const origin = board.create("point", [0, 0], {
                 fixed: true,
-                visible: false, // Hide the point
+                visible: false,
               });
 
               const fixedPoint = board.create("point", [1, 0], {
                 fixed: true,
-                visible: false, // Hide the point
+                visible: false,
               });
 
-              // Draw the angle
               const angle = board.create(
                 "angle",
                 [fixedPoint, origin, movablePoint],
                 {
-                  radius: 0.5, // Radius of the arc
-                  withLabel: false, // Disable default label
+                  radius: 0.5,
+                  withLabel: false,
                 }
               );
 
-              // Add custom text to display angle in degrees
               const angleText = board.create(
                 "text",
                 [
@@ -268,14 +261,13 @@
               );
 
               function updateLabel() {
-                const x = movablePoint.X(); // Get the x-coordinate
-                const y = movablePoint.Y(); // Get the y-coordinate
+                const x = movablePoint.X();
+                const y = movablePoint.Y();
                 movablePoint.setAttribute({
                   name: `${x.toFixed(2)} + ${y.toFixed(2)}i`,
-                }); // Update the label
+                });
               }
 
-              // Register event listener for the point
               movablePoint.on("drag", updateLabel);
             </script>
             <p>
